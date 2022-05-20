@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -95,7 +95,7 @@ const Nav = () => {
   );
 
   return (
-    <React.Fragment>
+    <div>
       <CssBaseline />
 
       <IconButton
@@ -114,7 +114,7 @@ const Nav = () => {
       <Drawer anchor="left" open={expand} onClose={() => toggleExpand(false)}>
         <div>{menuList()}</div>
       </Drawer>
-    </React.Fragment>
+    </div>
   );
 };
 

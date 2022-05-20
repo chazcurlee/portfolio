@@ -9,7 +9,6 @@ import {
   CardContent,
   Divider,
 } from "@mui/material";
-import React from "react";
 import mindify from "../assets/img/mindify.png";
 import dndbot from "../assets/img/dndbot.png";
 import letterle from "../assets/img/letterle.png";

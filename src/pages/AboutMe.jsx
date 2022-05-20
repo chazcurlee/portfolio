@@ -1,4 +1,3 @@
-import React from "react";
 import { Paper, Divider } from "@mui/material";
 import AccordianComp from "../components/AccordianComp";
 

@@ -1,5 +1,4 @@
 import { Card, CardActionArea, CardActions, CardMedia } from "@mui/material";
-import React from "react";
 import resume from "../assets/img/resume.png";
 import ResumeCopy from "../assets/files/ResumeCopy.pdf";
 
