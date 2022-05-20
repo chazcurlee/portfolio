@@ -16,6 +16,9 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "config": {
+    "node-options": "--optimize_for_size --max_old_space_size=460 --gc_interval=100"
+  },
   "scripts": {
     "start": "node --max_old_space_size=2560 node_modules/.bin/react-scripts start",
     "build": "node --max_old_space_size=2560 node_modules/.bin/react-scripts build",
