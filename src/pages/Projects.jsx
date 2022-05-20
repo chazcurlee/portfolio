@@ -1,20 +1,18 @@
-import {
-  Card,
-  CardActionArea,
-  CardHeader,
-  CardMedia,
-  Typography,
-  CardActions,
-  Collapse,
-  CardContent,
-  Divider,
-} from "@mui/material";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import CardActions from "@mui/material/CardActions";
+import Collapse from "@mui/material/Collapse";
+import CardContent from "@mui/material/CardContent";
+import Divider from "@mui/material/Divider";
 import mindify from "../assets/img/mindify.png";
 import dndbot from "../assets/img/dndbot.png";
 import letterle from "../assets/img/letterle.png";
 import recipecentral from "../assets/img/recipecentral.png";
 import { useState } from "react";
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";

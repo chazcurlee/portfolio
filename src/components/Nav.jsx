@@ -1,28 +1,19 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Fab from "@mui/material/Fab";
 import MenuIcon from "@mui/icons-material/Menu";
-import AddIcon from "@mui/icons-material/Add";
-import SearchIcon from "@mui/icons-material/Search";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import { styled } from "@mui/material/styles";
+import styled from "@mui/material/styles/styled";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import FeaturedPlayListRoundedIcon from "@mui/icons-material/FeaturedPlayListRounded";
-import {
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  useTheme,
-} from "@mui/material";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
 import ContactPageRoundedIcon from "@mui/icons-material/ContactPageRounded";
 import { useNavigate } from "react-router-dom";
@@ -38,7 +29,7 @@ const StyledFab = styled(Fab)({
 
 const Nav = () => {
   const navigate = useNavigate();
-  const theme = useTheme();
+
   const [expand, toggleExpand] = useState(false);
 
   const handleClick = () => {

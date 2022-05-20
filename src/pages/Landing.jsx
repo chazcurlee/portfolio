@@ -2,7 +2,7 @@ import Paper from "@mui/material/Paper";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
-import { Card } from "@mui/material";
+import Card from "@mui/material/Card";
 
 const Landing = () => {
   return (

@@ -1,6 +1,6 @@
-import { Card, CardActionArea, CardActions, CardMedia } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
 import resume from "../assets/img/resume.png";
-import ResumeCopy from "../assets/files/ResumeCopy.pdf";
 
 const Resume = () => {
   return (
