@@ -5,9 +5,13 @@ import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import Info from './info/Info';
 import Nav from './components/Nav';
+import Paper from "@mui/material/Paper";
+import Divider from "@mui/material/Divider";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -35,7 +39,7 @@ function App() {
         <Grid item sx={{marginTop: '5vh'}}>
           <Routes>
             <Route path='/' element={<Landing />} />
-            <Route path='/about-me' element={<AboutMe Info={Info}/>} />
+            <Route path='/about-me' element={<AboutMe Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
             <Route path='/contact' element={<Contact Info={Info}/>} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/resume' element={<Resume />} />
