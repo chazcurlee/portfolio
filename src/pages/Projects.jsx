@@ -46,7 +46,7 @@ const Projects = () => {
         <CardActionArea>
           <CardMedia
             onClick={() => {
-              window.open("https://powerful-ridge-17729.herokuapp.com/");
+              window.open("https://recipe-central.onrender.com");
             }}
             component="img"
             height="140"
@@ -65,7 +65,7 @@ const Projects = () => {
           </IconButton>
           <IconButton
             onClick={() => {
-              window.open("https://powerful-ridge-17729.herokuapp.com/");
+              window.open("https://recipe-central.onrender.com");
             }}
           >
             <WebIcon></WebIcon>
