@@ -96,7 +96,7 @@ const Projects = () => {
         <CardActionArea>
           <CardMedia
             onClick={() => {
-              window.open("https://peaceful-falls-00710.herokuapp.com/");
+              window.open("https://mindify.onrender.com");
             }}
             component="img"
             height="140"
@@ -115,7 +115,7 @@ const Projects = () => {
           </IconButton>
           <IconButton
             onClick={() => {
-              window.open("https://peaceful-falls-00710.herokuapp.com/");
+              window.open("https://mindify.onrender.com");
             }}
           >
             <WebIcon></WebIcon>
