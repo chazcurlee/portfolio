@@ -4,25 +4,94 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.App {
+  height: 100vh;
+}
 
-@keyframes gradient {
+@keyframes wiggle {
   0% {
-    background-position: 0% 50%;
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0px 50%;
   }
+}
+
+.small {
+  font-size: xx-small;
+}
+
+.landing {
+  background-color: white;
+  width: 15vw;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.hover-3 {
+  --c: #10262e; /* the color  */
+  --h: 1.2em; /* the height */
+
+  line-height: var(--h);
+  color: #0000;
+  overflow: hidden;
+  text-shadow: 0 calc(-1 * var(--h) * var(--_i, 0)) var(--c),
+    0 calc(var(--h) * (1 - var(--_i, 0))) #fff;
+  background: linear-gradient(var(--c) 0 0) no-repeat
+    calc(200% - var(--_i, 0) * 100%) 100% / 200%
+    calc(100% * var(--_i, 0) + 0.08em);
+  transition: 0.3s calc(var(--_i, 0) * 0.3s),
+    background-position 0.3s calc(0.3s - calc(var(--_i, 0) * 0.3s));
+}
+.hover-3:hover {
+  --_i: 1;
+}
+
+.name {
+  animation: wiggle 2.5s infinite;
+}
+
+.name:hover {
+  background: linear-gradient(-45deg, #6355a4, #6355a4, #c93e2c, #c93e2c);
+  background-size: 300%;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-weight: 900; */
+  /* font-size: 5vw; */
+  /* letter-spacing: -5px; */
+  /* text-transform: uppercase; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 3s ease-in-out infinite;
+  -moz-animation: animated_text 3s ease-in-out infinite;
+  -webkit-animation: animated_text 3s ease-in-out infinite;
 }

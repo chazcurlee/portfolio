@@ -17,6 +17,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
 import ContactPageRoundedIcon from "@mui/icons-material/ContactPageRounded";
 import { useNavigate } from "react-router-dom";
+import "../index.css";
 
 const StyledFab = styled(Fab)({
   position: "fixed",
@@ -86,7 +87,7 @@ const Nav = () => {
   );
 
   return (
-    <div>
+    <div class="hidden">
       <CssBaseline />
 
       <IconButton
@@ -97,7 +98,8 @@ const Nav = () => {
       <StyledFab
         onClick={handleClick}
         position="fixed"
-        color="secondary"
+        // color="secondary"
+        background-color="blue"
         aria-label="add"
       >
         <MenuIcon />
