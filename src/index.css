@@ -269,15 +269,6 @@ code {
   }
 }
 
-.vine-1 {
-}
-.vine-2 {
-}
-.vine-3 {
-}
-.vine-4 {
-}
-
 .item {
   background-color: black;
   color: rgb(255, 255, 255);
@@ -313,8 +304,6 @@ code {
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-.blob {
-}
 
 .foot-container {
   height: calc(100% - 60px);
@@ -326,13 +315,14 @@ code {
 }
 
 .footer {
-  /* position: absolute;
-  
-  left: 0;
-  bottom: 0;
-  right: 1; */
   margin: 20px;
   display: inline-block;
+}
+
+.topper {
+  display: sticky;
+  position: absolute;
+  left: 50%;
 }
 
 .hidden {

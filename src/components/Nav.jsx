@@ -1,113 +1,145 @@
-import { useState } from "react";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import IconButton from "@mui/material/IconButton";
-import Fab from "@mui/material/Fab";
-import MenuIcon from "@mui/icons-material/Menu";
-import styled from "@mui/material/styles/styled";
-import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
-import FeaturedPlayListRoundedIcon from "@mui/icons-material/FeaturedPlayListRounded";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
-import ContactPageRoundedIcon from "@mui/icons-material/ContactPageRounded";
-import { useNavigate } from "react-router-dom";
 import "../index.css";
+import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
+import Card from "@mui/material/Card";
 
-const StyledFab = styled(Fab)({
-  position: "fixed",
-  zIndex: 1,
-  top: "5vh",
-  left: "5vw",
-  right: "90vw",
-  margin: "0 auto",
-});
-
-const Nav = () => {
-  const navigate = useNavigate();
-
-  const [expand, toggleExpand] = useState(false);
-
+const Nav = ({
+  setClassState,
+  setButtClassState,
+  buttonClassState,
+  classState,
+  nameState,
+  setNameState,
+  aniState,
+  setAniState,
+}) => {
   const handleClick = () => {
-    toggleExpand(!expand);
+    if (classState === "hidden") {
+      setClassState("");
+      setAniState("fadeIn");
+      setNameState("Chaz Curlee");
+      setButtClassState("full-grow btn btn-two");
+    }
+    if (classState != "hidden") {
+      setClassState("hidden");
+      setAniState("");
+      setNameState("Software Engineer.");
+      setButtClassState("name-grow btn");
+    }
   };
-
-  const menuList = () => (
-    <Box sx={{ width: 250 }} onClick={handleClick}>
-      <List>
-        <ListItem onClick={() => navigate("/projects")}>
-          <ListItemButton>
-            <ListItemIcon>
-              <FeaturedPlayListRoundedIcon />
-            </ListItemIcon>
-            <ListItemText>Projects</ListItemText>
-          </ListItemButton>
-        </ListItem>
-
-        <Divider />
-
-        <ListItem onClick={() => navigate("/about-me")}>
-          <ListItemButton>
-            <ListItemIcon>
-              <InfoRoundedIcon />
-            </ListItemIcon>
-            <ListItemText>About Me</ListItemText>
-          </ListItemButton>
-        </ListItem>
-
-        <Divider />
-
-        <ListItem onClick={() => navigate("/resume")}>
-          <ListItemButton>
-            <ListItemIcon>
-              <ArticleRoundedIcon />
-            </ListItemIcon>
-            <ListItemText>Resume</ListItemText>
-          </ListItemButton>
-        </ListItem>
-
-        <Divider />
-
-        <ListItem onClick={() => navigate("/contact")}>
-          <ListItemButton>
-            <ListItemIcon>
-              <ContactPageRoundedIcon />
-            </ListItemIcon>
-            <ListItemText>Contact Me</ListItemText>
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider />
-    </Box>
-  );
+  const buttClick = () => {};
 
   return (
-    <div class="hidden">
-      <CssBaseline />
-
-      <IconButton
-        position="fixed"
-        color="inherit"
-        aria-label="open drawer"
-      ></IconButton>
-      <StyledFab
-        onClick={handleClick}
-        position="fixed"
-        // color="secondary"
-        background-color="blue"
-        aria-label="add"
+    <Grid container direction="column">
+      <Grid item justifySelf="center" alignSelf="center">
+        <h1 className={buttonClassState} onClick={handleClick}>
+          {nameState}
+        </h1>
+      </Grid>
+      <Grid
+        container
+        sx={{
+          display: "grid",
+          gridTemplateRows: "repeat(4, 1fr)",
+          gridTempalteColumns: "3",
+        }}
+        rowSpacing={1}
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        <MenuIcon />
-      </StyledFab>
-      <Drawer anchor="left" open={expand} onClose={() => toggleExpand(false)}>
-        <div>{menuList()}</div>
-      </Drawer>
-    </div>
+        <Grid
+          item
+          alignSelf="center"
+          justifySelf="center"
+          gridColumn="span 2"
+          gridRow="1"
+          xs={6}
+        >
+          <Card
+            sx={{
+              backgroundColor: "black",
+              color: "white",
+              borderRadius: "100%",
+              padding: "5px",
+            }}
+            className={`item-1 ${classState} ${aniState}`}
+            id="AbtMe"
+          >
+            <Link className="item" to="/about-me">
+              About Me
+            </Link>
+          </Card>
+        </Grid>
+        <Grid
+          item
+          alignSelf="center"
+          justifySelf="center"
+          gridColumn="span 2"
+          gridRow="1"
+          xs={6}
+        >
+          <Card
+            sx={{
+              backgroundColor: "black",
+              color: "white",
+              borderRadius: "100%",
+              padding: "5px",
+            }}
+            className={`${classState} ${aniState} item-2`}
+            id="Proj"
+          >
+            <Link className="item" to="/projects">
+              Projects
+            </Link>
+          </Card>
+        </Grid>
+        <Grid
+          item
+          alignSelf="center"
+          justifySelf="center"
+          gridColumn="2 / 3"
+          gridRow="2"
+          xs={6}
+        >
+          <Card
+            sx={{
+              backgroundColor: "black",
+              color: "white",
+              borderRadius: "75%",
+              padding: "5px",
+            }}
+            className={`${classState} ${aniState} item-3`}
+            id="res"
+          >
+            <Link className="item" to="/resume">
+              Resume
+            </Link>
+          </Card>
+        </Grid>
+        <Grid
+          item
+          alignSelf=""
+          justifySelf="center"
+          gridColumn="3 / 4"
+          gridRow="2"
+          xs={6}
+        >
+          <Card
+            sx={{
+              backgroundColor: "black",
+              color: "white",
+              borderRadius: "75%",
+              padding: "5px",
+            }}
+            className={`${classState} ${aniState} item-4`}
+            id="ContMe"
+          >
+            <Link className="item" to="/contact">
+              Contact Me
+            </Link>
+          </Card>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 
