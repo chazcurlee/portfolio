@@ -107,6 +107,10 @@ code {
   border-radius: 50%;
   font-family: "Inspiration", cursive;
   font-size: 3em;
+  overflow: hidden;
+  box-shadow: 10px 10px;
+  animation-name: shadow-move;
+  animation-duration: 3s;
 }
 .btn {
   position: relative;
@@ -162,6 +166,15 @@ code {
   animation-duration: 2s;
 }
 
+@keyframes shadow-move {
+  0% {
+    box-shadow: 0px 0px;
+  }
+  100% {
+    box-shadow: 10px 10px;
+  }
+}
+
 @keyframes rotatecw {
   from {
     transform: rotate(0deg);
@@ -202,7 +215,7 @@ code {
   /* font-family: "Inspiration", cursive; */
   font-weight: 900;
   font-size: 1vw;
-  border-style: none;
+  border-style: solid;
   /* border-radius: 50%; */
   /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -276,6 +289,26 @@ code {
 }
 .blob {
 }
+
+.foot-container {
+  height: calc(100% - 60px);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 1;
+  max-height: 5%;
+}
+
+.footer {
+  /* position: absolute;
+  
+  left: 0;
+  bottom: 0;
+  right: 1; */
+  margin: 20px;
+  display: inline-block;
+}
+
 .hidden {
   visibility: hidden;
 }

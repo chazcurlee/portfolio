@@ -1,9 +1,7 @@
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
-import { useState } from "react";
 import "../index.css";
-import { useEffect } from "react";
 
 const Landing = ({
   setClassState,
@@ -12,6 +10,8 @@ const Landing = ({
   classState,
   nameState,
   setNameState,
+  aniState,
+  setAniState,
 }) => {
   // let [classState, setClassState] = useState("hidden");
   // let [buttonClassState, setButtClassState] = useState("name-grow btn");
@@ -19,12 +19,14 @@ const Landing = ({
 
   const handleClick = (e) => {
     if (classState === "hidden") {
-      setClassState("fadeIn");
+      setClassState("");
+      setAniState("fadeIn");
       setNameState("Chaz Curlee");
       setButtClassState("full-grow btn btn-two");
     }
     if (classState != "hidden") {
       setClassState("hidden");
+      setAniState("");
       setNameState("Software Engineer.");
       setButtClassState("name-grow btn");
     }
@@ -69,7 +71,7 @@ const Landing = ({
               color: "white",
               borderRadius: "100%",
             }}
-            className={`item-1 ${classState}`}
+            className={`item-1 ${classState} ${aniState}`}
           >
             <Link className="item" to="/about-me">
               About Me
@@ -90,7 +92,7 @@ const Landing = ({
               color: "white",
               borderRadius: "100%",
             }}
-            className={`${classState} item-2`}
+            className={`${classState} ${aniState} item-2`}
           >
             <Link className="item" to="/projects">
               Projects
@@ -111,7 +113,7 @@ const Landing = ({
               color: "white",
               borderRadius: "75%",
             }}
-            className={`${classState} item-3`}
+            className={`${classState} ${aniState} item-3`}
           >
             <Link className="item" to="/resume">
               Resume
@@ -132,7 +134,7 @@ const Landing = ({
               color: "white",
               borderRadius: "75%",
             }}
-            className={`${classState} item-4`}
+            className={`${classState} ${aniState} item-4`}
           >
             <Link className="item" to="/contact">
               Contact Me
