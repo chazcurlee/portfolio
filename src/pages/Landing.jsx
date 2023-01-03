@@ -5,25 +5,23 @@ import { useState } from "react";
 import "../index.css";
 import { useEffect } from "react";
 
-const Landing = () => {
-  let [classState, setClassState] = useState("hidden");
-  let [buttonClassState, setButtClassState] = useState("name-grow btn");
+const Landing = ({
+  setClassState,
+  setButtClassState,
+  buttonClassState,
+  classState,
+}) => {
+  // let [classState, setClassState] = useState("hidden");
+  // let [buttonClassState, setButtClassState] = useState("name-grow btn");
   let [nameState, setNameState] = useState("Software Engineer.");
-  let [lockState, setLockState] = useState(true);
-
-  function timeout(delay) {
-    return new Promise((res) => setTimeout(res, delay));
-  }
 
   const handleClick = (e) => {
     if (classState === "hidden") {
-      setLockState(false);
       setClassState("fadeIn");
       setNameState("Chaz Curlee");
       setButtClassState("full-grow btn btn-two");
     }
     if (classState != "hidden") {
-      setLockState(true);
       setClassState("hidden");
       setNameState("Software Engineer.");
       setButtClassState("name-grow btn");

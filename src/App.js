@@ -11,17 +11,27 @@ import Nav from './components/Nav';
 import Paper from "@mui/material/Paper";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
+import {useState, useEffect} from 'react'
 
 
 
 
 function App() {
   
-
+  let [classState, setClassState] = useState("hidden");
+  let [buttonClassState, setButtClassState] = useState("name-grow btn");
+  let [bgState, setBgState] = useState('')
   
+  useEffect(() => {
+    if (classState != "hidden") {setBgState('bg')}
+  }, [classState])
+
 
   return (
     <div className="App">
+      <div className={bgState}></div>
+      <div className={`${bgState} bg2`}></div>
+      <div className={`${bgState} bg3`}></div>
       
       {/* <div className="d-flex flex-column justify-content-center w-100 h-100">
 
@@ -38,7 +48,7 @@ function App() {
           
         <Grid item sx={{marginTop: '5vh'}}> */}
           <Routes>
-            <Route path='/' element={<Landing />} />
+            <Route path='/' element={<Landing setClassState={setClassState} setButtClassState={setButtClassState} classState={classState} buttonClassState={buttonClassState}/>} />
             <Route path='/about-me' element={<AboutMe Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
             <Route path='/contact' element={<Contact Info={Info}/>} />
             <Route path='/projects' element={<Projects />} />
