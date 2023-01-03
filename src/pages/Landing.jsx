@@ -10,10 +10,12 @@ const Landing = ({
   setButtClassState,
   buttonClassState,
   classState,
+  nameState,
+  setNameState,
 }) => {
   // let [classState, setClassState] = useState("hidden");
   // let [buttonClassState, setButtClassState] = useState("name-grow btn");
-  let [nameState, setNameState] = useState("Software Engineer.");
+  // let [nameState, setNameState] = useState("Software Engineer.");
 
   const handleClick = (e) => {
     if (classState === "hidden") {

@@ -20,6 +20,7 @@ function App() {
   
   let [classState, setClassState] = useState("hidden");
   let [buttonClassState, setButtClassState] = useState("name-grow btn");
+  let [nameState, setNameState] = useState("Software Engineer.");
   let [bgState, setBgState] = useState('')
   
   useEffect(() => {
@@ -48,7 +49,7 @@ function App() {
           
         <Grid item sx={{marginTop: '5vh'}}> */}
           <Routes>
-            <Route path='/' element={<Landing setClassState={setClassState} setButtClassState={setButtClassState} classState={classState} buttonClassState={buttonClassState}/>} />
+            <Route path='/' element={<Landing setClassState={setClassState} setButtClassState={setButtClassState} classState={classState} buttonClassState={buttonClassState} nameState={nameState} setNameState={setNameState}/>} />
             <Route path='/about-me' element={<AboutMe Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
             <Route path='/contact' element={<Contact Info={Info}/>} />
             <Route path='/projects' element={<Projects />} />
