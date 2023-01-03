@@ -25,6 +25,7 @@ function App() {
   
   useEffect(() => {
     if (classState != "hidden") {setBgState('bg')}
+    if (classState === "hidden") {setBgState('')}
   }, [classState])
 
 
