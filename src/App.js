@@ -23,20 +23,20 @@ function App() {
   return (
     <div className="App">
       
-      <div className="d-flex flex-column justify-content-center w-100 h-100">
+      {/* <div className="d-flex flex-column justify-content-center w-100 h-100">
 
-	    <div className="d-flex flex-column justify-content-center align-items-center">
+	    <div className="d-flex flex-column justify-content-center align-items-center"> */}
 		
 		
 			<Nav />
 		
 	
-      <Grid container 
+      {/* <Grid container 
         direction="column"
         justifyContent="center"
         alignItems="center">
           
-        <Grid item sx={{marginTop: '5vh'}}>
+        <Grid item sx={{marginTop: '5vh'}}> */}
           <Routes>
             <Route path='/' element={<Landing />} />
             <Route path='/about-me' element={<AboutMe Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
@@ -44,11 +44,11 @@ function App() {
             <Route path='/projects' element={<Projects />} />
             <Route path='/resume' element={<Resume />} />
           </Routes>
-        </Grid>
-      </Grid>
+        {/* </Grid>
+      </Grid> */}
       </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 }
 

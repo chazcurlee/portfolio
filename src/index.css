@@ -1,3 +1,31 @@
+a {
+  text-decoration: none;
+}
+
+.item-1.fadeIn {
+  animation-duration: 3s;
+}
+.fadeIn.item-2 {
+  animation-duration: 3s;
+}
+.fadeIn.item-3 {
+  animation-duration: 3s;
+}
+.fadeIn.item-4 {
+  animation-duration: 3s;
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeIn;
+  animation-timing-function: ease;
+  animation-duration: 4s;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -12,24 +40,6 @@ code {
 }
 .App {
   height: 100vh;
-}
-
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(0deg);
-  }
-  85% {
-    transform: rotate(5deg);
-  }
-  95% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 @keyframes animated_text {
@@ -50,48 +60,190 @@ code {
 
 .landing {
   background-color: white;
-  width: 15vw;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.hidden {
-  visibility: hidden;
+/* .name {
+  text-align: center;
+  position: relative;
+  border-style: solid;
+  border-radius: 50%;
+  width: 256px;
+  height: 64px;
+  background-color: white;
+  line-height: 64px;
+  bottom: 0;
+  left: 0;
+} */
+
+.full-grow {
+  width: 256px;
+  height: 64px;
+  background-color: black;
+  border-style: none;
+  border-radius: 50%;
+  font-family: "Inspiration", cursive;
+  font-size: 3em;
+}
+.btn {
+  position: relative;
+  color: white;
+  width: 256px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+  span {
+    transition: all 0.3s;
+    tranform: scale(1, 1);
+  }
 }
 
-.hover-3 {
-  --c: #10262e; /* the color  */
-  --h: 1.2em; /* the height */
-
-  line-height: var(--h);
-  color: #0000;
-  overflow: hidden;
-  text-shadow: 0 calc(-1 * var(--h) * var(--_i, 0)) var(--c),
-    0 calc(var(--h) * (1 - var(--_i, 0))) #fff;
-  background: linear-gradient(var(--c) 0 0) no-repeat
-    calc(200% - var(--_i, 0) * 100%) 100% / 200%
-    calc(100% * var(--_i, 0) + 0.08em);
-  transition: 0.3s calc(var(--_i, 0) * 0.3s),
-    background-position 0.3s calc(0.3s - calc(var(--_i, 0) * 0.3s));
-}
-.hover-3:hover {
-  --_i: 1;
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.name {
-  animation: wiggle 2.5s infinite;
+.btn-two::before,
+.btn-two::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  left: 96px;
+  width: 64px;
+
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.name:hover {
+.btn-two::before {
+  animation-name: rotateccw;
+  animation-duration: 3s;
+}
+
+.btn-two::after {
+  animation-name: rotatecw;
+  animation-duration: 2s;
+}
+
+@keyframes rotatecw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.name-grow {
+  width: 256px;
+  height: 64px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-align: center;
+  align-self: center;
   background: linear-gradient(-45deg, #6355a4, #6355a4, #c93e2c, #c93e2c);
   background-size: 300%;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* font-weight: 900; */
-  /* font-size: 5vw; */
-  /* letter-spacing: -5px; */
-  /* text-transform: uppercase; */
+  /* font-family: "Inspiration", cursive; */
+  font-weight: 900;
+  font-size: 1vw;
+  border-style: none;
+  border-radius: 50%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animated_text 3s ease-in-out infinite;
   -moz-animation: animated_text 3s ease-in-out infinite;
   -webkit-animation: animated_text 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opactiy: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.vine-1 {
+}
+.vine-2 {
+}
+.vine-3 {
+}
+.vine-4 {
+}
+
+.item {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+}
+
+.item-1 {
+  border-radius: 100%;
+  background-color: black;
+}
+.item-2 {
+}
+.item-3 {
+}
+.item-4 {
+}
+.blob {
+}
+.hidden {
+  visibility: hidden;
 }
