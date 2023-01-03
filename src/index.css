@@ -19,8 +19,11 @@
   animation-duration: 5s;
 }
 
-a {
+a,
+a:visited,
+.footer {
   text-decoration: none;
+  color: white;
 }
 
 .item-1.fadeIn {
