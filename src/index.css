@@ -197,18 +197,18 @@ code {
   color: black;
   text-align: center;
   align-self: center;
-  background: linear-gradient(-45deg, #6355a4, #6355a4, #c93e2c, #c93e2c);
+  /* background: linear-gradient(-45deg, #6355a4, #6355a4, #c93e2c, #c93e2c); */
   background-size: 300%;
   /* font-family: "Inspiration", cursive; */
   font-weight: 900;
   font-size: 1vw;
   border-style: none;
-  border-radius: 50%;
-  -webkit-background-clip: text;
+  /* border-radius: 50%; */
+  /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animated_text 3s ease-in-out infinite;
   -moz-animation: animated_text 3s ease-in-out infinite;
-  -webkit-animation: animated_text 3s ease-in-out infinite;
+  -webkit-animation: animated_text 3s ease-in-out infinite; */
   cursor: pointer;
 }
 
