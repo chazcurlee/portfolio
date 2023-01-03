@@ -33,15 +33,7 @@ const Landing = ({
   };
 
   return (
-    <Grid
-      container
-      direction="column"
-      // justifySelf="top"
-      // alignSelf="top"
-      // justifyContent="center"
-      // alignItems="center"
-      // height="100vh"
-    >
+    <Grid container direction="column">
       <Grid item justifySelf="center" alignSelf="center">
         <h1 className={buttonClassState} onClick={handleClick}>
           {nameState}
@@ -70,6 +62,7 @@ const Landing = ({
               backgroundColor: "black",
               color: "white",
               borderRadius: "100%",
+              padding: "5px",
             }}
             className={`item-1 ${classState} ${aniState}`}
           >
@@ -91,6 +84,7 @@ const Landing = ({
               backgroundColor: "black",
               color: "white",
               borderRadius: "100%",
+              padding: "5px",
             }}
             className={`${classState} ${aniState} item-2`}
           >
@@ -112,6 +106,7 @@ const Landing = ({
               backgroundColor: "black",
               color: "white",
               borderRadius: "75%",
+              padding: "5px",
             }}
             className={`${classState} ${aniState} item-3`}
           >
@@ -133,6 +128,7 @@ const Landing = ({
               backgroundColor: "black",
               color: "white",
               borderRadius: "75%",
+              padding: "5px",
             }}
             className={`${classState} ${aniState} item-4`}
           >

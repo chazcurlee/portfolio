@@ -28,15 +28,19 @@ a:visited,
 
 .item-1.fadeIn {
   animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 .fadeIn.item-2 {
   animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 .fadeIn.item-3 {
   animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 .fadeIn.item-4 {
   animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 .fadeIn {
   -webkit-animation-name: fadeIn;
@@ -88,19 +92,6 @@ code {
   width: 100vw;
   height: 100vh;
 }
-
-/* .name {
-  text-align: center;
-  position: relative;
-  border-style: solid;
-  border-radius: 50%;
-  width: 256px;
-  height: 64px;
-  background-color: white;
-  line-height: 64px;
-  bottom: 0;
-  left: 0;
-} */
 
 .full-grow {
   width: 256px;
@@ -175,6 +166,20 @@ code {
   }
   100% {
     box-shadow: 10px 10px;
+  }
+}
+
+@keyframes small-shadow-move {
+  0% {
+    padding: 5px;
+  }
+
+  50% {
+    padding: 10px;
+  }
+
+  100% {
+    padding: 5px;
   }
 }
 
@@ -280,15 +285,33 @@ code {
   height: 100%;
 }
 
+.item:hover {
+  text-decoration: underline;
+}
+
 .item-1 {
   border-radius: 100%;
   background-color: black;
 }
-.item-2 {
+.item-1:hover {
+  animation-name: small-shadow-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
-.item-3 {
+.item-2:hover {
+  animation-name: small-shadow-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
-.item-4 {
+.item-3:hover {
+  animation-name: small-shadow-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.item-4:hover {
+  animation-name: small-shadow-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 .blob {
 }
