@@ -29,7 +29,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const Projects = () => {
+const Projects = ({ classState }) => {
   const [expandedMind, setExpandedMind] = useState(false);
   const [expandedRecipe, setExpandedRecipe] = useState(false);
   const [expandedDnd, setExpandedDnd] = useState(false);
@@ -41,7 +41,7 @@ const Projects = () => {
   };
 
   return (
-    <div>
+    <div className={`${classState} projects`}>
       <Card sx={{ maxWidth: "80vw", marginBottom: "50px" }}>
         <CardActionArea>
           <CardMedia

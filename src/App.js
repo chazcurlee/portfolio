@@ -55,9 +55,10 @@ function App() {
 
         <Routes>
           {/* <Route path='/' element={<Landing aniState={aniState} setAniState={setAniState} setClassState={setClassState} setButtClassState={setButtClassState} classState={classState} buttonClassState={buttonClassState} nameState={nameState} setNameState={setNameState}/>} /> */}
+          <Route path='/' element={<AboutMe classState={classState} Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
           <Route path='/about-me' element={<AboutMe classState={classState} Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
           <Route path='/contact' element={<Contact Info={Info}/>} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects' element={<Projects classState={classState}/>} />
           <Route path='/resume' element={<Resume />} />
         </Routes>
         {/* <AboutMe classState={classState} Info={Info} /> */}
