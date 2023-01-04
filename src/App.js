@@ -1,6 +1,5 @@
 import './App.css';
 import {Route, Routes} from 'react-router-dom'
-import Landing from './pages/Landing';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
@@ -11,6 +10,7 @@ import Divider from "@mui/material/Divider";
 import {useState, useEffect} from 'react'
 import Footer from './components/Footer'
 import Nav from './components/Nav';
+
 
 
 
@@ -29,11 +29,15 @@ function App() {
   }, [classState])
 
 
+
+
   return (
     <div className="App">
       <div className={bgState}></div>
       <div className={`${bgState} bg2`}></div>
       <div className={`${bgState} bg3`}></div>
+      
+      
 		
 		
 
@@ -51,11 +55,12 @@ function App() {
 
         <Routes>
           {/* <Route path='/' element={<Landing aniState={aniState} setAniState={setAniState} setClassState={setClassState} setButtClassState={setButtClassState} classState={classState} buttonClassState={buttonClassState} nameState={nameState} setNameState={setNameState}/>} /> */}
-          <Route path='/about-me' element={<AboutMe Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
+          <Route path='/about-me' element={<AboutMe classState={classState} Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
           <Route path='/contact' element={<Contact Info={Info}/>} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/resume' element={<Resume />} />
         </Routes>
+        {/* <AboutMe classState={classState} Info={Info} /> */}
         <Footer classState={classState}/>
 
     </div>

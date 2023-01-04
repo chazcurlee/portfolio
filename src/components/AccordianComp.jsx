@@ -43,8 +43,17 @@ const AccordianComp = ({ type, Info }) => {
 
   return (
     <div>
-      <Accordion sx={{ maxWidth: "60vw" }}>
+      <Accordion
+        sx={{
+          maxWidth: "60vw",
+          backgroundColor: "black",
+          color: "white",
+          textAlign: "center",
+          justifyContent: "center",
+        }}
+      >
         <AccordionSummary
+          sx={{ justifyContent: "center" }}
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"

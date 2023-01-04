@@ -4,13 +4,14 @@ import resume from "../assets/img/resume.png";
 
 const Resume = () => {
   return (
-    <div>
+    <div className="resume">
       <h1>Resume</h1>
-      <Card>
+      <Card sx={{}}>
         <a href="https://docs.google.com/document/d/1TyzUGlZK5YQHXGNvPZzyu-oYiESuD2eQFUQCRMrxKPk/edit?usp=sharing">
           <CardMedia
             component="img"
             height="auto"
+            width="auto"
             image={resume}
             alt="letterle logo"
           ></CardMedia>

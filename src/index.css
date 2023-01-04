@@ -1,3 +1,15 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  height: 100vh;
+}
+
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
@@ -26,6 +38,10 @@ a:visited,
   color: white;
 }
 
+.portrait {
+  z-index: -1;
+}
+
 .item-1.fadeIn {
   animation-duration: 3s;
   animation-iteration-count: 1;
@@ -52,34 +68,6 @@ a:visited,
   animation-name: fadeIn;
   animation-timing-function: ease;
   animation-duration: 4s;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.App {
-  height: 100vh;
-}
-
-@keyframes animated_text {
-  0% {
-    background-position: 0px 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0px 50%;
-  }
 }
 
 .small {
@@ -160,6 +148,18 @@ code {
   animation-duration: 2s;
 }
 
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
+}
+
 @keyframes shadow-move {
   0% {
     box-shadow: 0px 0px;
@@ -211,28 +211,6 @@ code {
   }
 }
 
-.name-grow {
-  width: 256px;
-  height: 64px;
-  background-color: rgb(255, 255, 255);
-  color: black;
-  text-align: center;
-  align-self: center;
-  /* background: linear-gradient(-45deg, #6355a4, #6355a4, #c93e2c, #c93e2c); */
-  background-size: 300%;
-  /* font-family: "Inspiration", cursive; */
-  font-weight: 900;
-  font-size: 1vw;
-  border-style: solid;
-  /* border-radius: 50%; */
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animated_text 3s ease-in-out infinite;
-  -moz-animation: animated_text 3s ease-in-out infinite;
-  -webkit-animation: animated_text 3s ease-in-out infinite; */
-  cursor: pointer;
-}
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -267,6 +245,45 @@ code {
   100% {
     opacity: 0;
   }
+}
+
+@keyframes underlineBlink {
+  0% {
+    /* text-decoration: none; */
+    border-style: solid;
+  }
+  100% {
+    /* text-decoration: underline; */
+    border-style: double;
+  }
+}
+
+.resume {
+  width: 40vw;
+  margin: auto;
+}
+
+.name-grow {
+  width: 256px;
+  height: 64px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-align: center;
+  align-self: center;
+  /* background: linear-gradient(-45deg, #6355a4, #6355a4, #c93e2c, #c93e2c); */
+  background-size: 300%;
+  /* font-family: "Inspiration", cursive; */
+  font-weight: 900;
+  font-size: 1vw;
+  border-style: solid;
+  /* border-radius: 50%; */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 3s ease-in-out infinite;
+  -moz-animation: animated_text 3s ease-in-out infinite;
+  -webkit-animation: animated_text 3s ease-in-out infinite; */
+  cursor: pointer;
+  animation: underlineBlink 2s linear infinite;
 }
 
 .item {
@@ -307,7 +324,7 @@ code {
 
 .foot-container {
   height: calc(100% - 60px);
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 1;

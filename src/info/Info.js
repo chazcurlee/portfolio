@@ -1,6 +1,6 @@
 const Info =  {
 
-    location: 'Woodstock, GA 30189',
+    location: 'Sandy Springs, GA 30350',
     name: "Chaz Curlee",
     email: 'chaz.curlee@gmail.com',
     languages: ['HTML/CSS', 'Javascript', 'Python'],
