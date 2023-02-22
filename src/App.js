@@ -1,15 +1,11 @@
 import './App.css';
+import './index.css'
 import {Route, Routes} from 'react-router-dom'
-import AboutMe from './pages/AboutMe';
-import Contact from './pages/Contact';
-import Projects from './pages/Projects';
-import Resume from './pages/Resume';
-import Info from './info/Info';
-import Paper from "@mui/material/Paper";
-import Divider from "@mui/material/Divider";
 import {useState, useEffect} from 'react'
-import Footer from './components/Footer'
-import Nav from './components/Nav';
+import Landing from './pages/Landing';
+import Main from './pages/Main';
+
+
 
 
 
@@ -17,56 +13,54 @@ import Nav from './components/Nav';
 
 function App() {
   
-  let [classState, setClassState] = useState("hidden");
-  let [aniState, setAniState] = useState("")
-  let [buttonClassState, setButtClassState] = useState("name-grow btn");
-  let [nameState, setNameState] = useState("Software Engineer.");
-  let [bgState, setBgState] = useState('')
+  const [open, setOpen] = useState("")
+  const [scroll, setScroll] = useState("hidden")
+  let [scrollVal, setScrollVal] = useState(0)
   
   useEffect(() => {
-    if (classState != "hidden") {setBgState('bg')}
-    if (classState === "hidden") {setBgState('')}
-  }, [classState])
 
+    const countScroll = () => {
+      setScrollVal(window.scrollY)
+    }
 
+    window.addEventListener("scroll", countScroll)
 
+    if (scrollVal > 500) {
+      setScroll("scroll-fade-in")
+    }
 
+    if (scrollVal < 500) {
+      setScroll("scroll-fade-out")
+    }
+
+    return () => {window.removeEventListener("scroll", countScroll)}
+  }, [scrollVal])
+
+  const handleScrollToTop = () => {
+    window.scrollTo({top: 0, behavior: "smooth"})
+  }
+  
   return (
-    <div className="App">
-      <div className={bgState}></div>
-      <div className={`${bgState} bg2`}></div>
-      <div className={`${bgState} bg3`}></div>
-      
-      
-		
-		
+   <div className='App'>
+     <Routes>
+       <Route path="/" element={<Landing open={open} setOpen={setOpen}/>} />
+       <Route path="/portfolio" element={<Main setOpen={setOpen} />} />
+     </Routes>
+    <span className={`${scroll} scroll-up`}>
+      <div className="clickable">
+      <lord-icon
+        
+        onClick={handleScrollToTop}
+        src="https://cdn.lordicon.com/ygydemai.json"
+        trigger="hover"
+        colors="primary:#dddddd,secondary:#08a88a"
+        style={{width:"5rem", height:"5rem"}}>
+      </lord-icon>
+      </div>
+    </span>
+   </div>
 
-        <Nav aniState={aniState}
-          setAniState={setAniState}
-          setClassState={setClassState}
-          setButtClassState={setButtClassState}
-          classState={classState}
-          buttonClassState={buttonClassState}
-          nameState={nameState}
-          setNameState={setNameState}
-          className={`topper`}
-          />
-	
-
-        <Routes>
-          {/* <Route path='/' element={<Landing aniState={aniState} setAniState={setAniState} setClassState={setClassState} setButtClassState={setButtClassState} classState={classState} buttonClassState={buttonClassState} nameState={nameState} setNameState={setNameState}/>} /> */}
-          <Route path='/' element={<AboutMe classState={classState} Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
-          <Route path='/about-me' element={<AboutMe classState={classState} Paper={<Paper />} Divider={<Divider />} Info={Info}/>} />
-          <Route path='/contact' element={<Contact Info={Info}/>} />
-          <Route path='/projects' element={<Projects classState={classState}/>} />
-          <Route path='/resume' element={<Resume />} />
-        </Routes>
-        {/* <AboutMe classState={classState} Info={Info} /> */}
-        <Footer classState={classState}/>
-
-    </div>
-
-  );
+  )
 }
 
 export default App;

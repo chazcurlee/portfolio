@@ -1,39 +1,32 @@
-import Grid from "@mui/material/Grid";
-import { Link } from "react-router-dom";
-import Card from "@mui/material/Card";
-import "../index.css";
-import Nav from "../components/Nav";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Landing = ({
-  setClassState,
-  setButtClassState,
-  buttonClassState,
-  classState,
-  nameState,
-  setNameState,
-  aniState,
-  setAniState,
-}) => {
-  // let [classState, setClassState] = useState("hidden");
-  // let [buttonClassState, setButtClassState] = useState("name-grow btn");
-  // let [nameState, setNameState] = useState("Software Engineer.");
+const Landing = ({ open, setOpen }) => {
+  const [arrow, setArrow] = useState("");
+  const navigate = useNavigate();
 
-  // const handleClick = (e) => {
-  //   if (classState === "hidden") {
-  //     setClassState("");
-  //     setAniState("fadeIn");
-  //     setNameState("Chaz Curlee");
-  //     setButtClassState("full-grow btn btn-two");
-  //   }
-  //   if (classState != "hidden") {
-  //     setClassState("hidden");
-  //     setAniState("");
-  //     setNameState("Software Engineer.");
-  //     setButtClassState("name-grow btn");
-  //   }
-  // };
+  const handleClick = () => {
+    setOpen("entrance");
+    setArrow("hidden");
+    setTimeout(transition, 1200);
+  };
 
-  return <div></div>;
+  const transition = () => {
+    navigate("/portfolio");
+  };
+
+  return (
+    <div className={`landing ${open}`}>
+      <div className="middle-box">
+        <BsArrowLeft className={`left-arrow ${arrow}`} />{" "}
+        <BsArrowRight className={`right-arrow ${arrow}`} />
+        <div className={`open-box ${open}`} onClick={handleClick}>
+          <h3 id="intro">You're Next Software Engineer</h3>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Landing;
