@@ -178,17 +178,17 @@ const Contact = () => {
         </div>
         <div id="icon-list">
           <div id="linkedin" className="contact-item">
-            <a href="https://www.linkedin.com/in/chaz-curlee/">
+            <a href="https://www.linkedin.com/in/chaz-curlee/" target="_blank">
               <i className="fab fa-linkedin fa-2xl"></i>
             </a>
           </div>
           <div id="twitter" className="contact-item">
-            <a href="https://twitter.com/blank_brow">
+            <a href="https://twitter.com/blank_brow" target="_blank">
               <i className="fab fa-twitter fa-2xl"></i>
             </a>
           </div>
           <div id="github" className="contact-item">
-            <a href="https://github.com/chazcurlee">
+            <a href="https://github.com/chazcurlee" target="_blank">
               <i className="fab fa-github fa-2xl"></i>
             </a>
           </div>

@@ -1,1 +1,63 @@
+.marginless {
+  margin: 0;
+}
 
+.paddingless {
+  padding: 0;
+}
+
+.color-white {
+  color: #dddddd;
+}
+
+.no-text-decor {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.width-100-prct {
+  width: 100%;
+}
+
+.height-100-prct {
+  height: 100%;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.just-cont-center {
+  justify-content: center;
+}
+
+.align-cont-center {
+  align-content: center;
+}
+
+.just-self-center {
+  justify-self: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.box-shadow {
+  box-shadow: 20px 20px 60px #081d24, -2px -2px 6px #0a242c;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}

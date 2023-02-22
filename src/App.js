@@ -1,14 +1,10 @@
 import './App.css';
 import './index.css'
+import "./styles/Main.css"
 import {Route, Routes} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Landing from './pages/Landing';
 import Main from './pages/Main';
-
-
-
-
-
 
 
 function App() {
@@ -49,7 +45,6 @@ function App() {
     <span className={`${scroll} scroll-up`}>
       <div className="clickable">
       <lord-icon
-        
         onClick={handleScrollToTop}
         src="https://cdn.lordicon.com/ygydemai.json"
         trigger="hover"
