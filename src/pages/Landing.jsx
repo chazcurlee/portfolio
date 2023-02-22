@@ -17,8 +17,8 @@ const Landing = ({ open, setOpen }) => {
   };
 
   return (
-    <div className={`landing ${open}`}>
-      <div className="middle-box">
+    <div className={`landing display-grid just-cont-center align-cont-center `}>
+      <div className={`middle-box  ${open}`}>
         <BsArrowLeft className={`left-arrow ${arrow}`} />{" "}
         <BsArrowRight className={`right-arrow ${arrow}`} />
         <div className={`open-box ${open}`} onClick={handleClick}>

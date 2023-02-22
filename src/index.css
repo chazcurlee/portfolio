@@ -1,19 +1,21 @@
 /* Tags */
 
+.App {
+  text-align: center;
+  min-height: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   overflow-x: hidden;
-}
-
-body {
   margin: 0px;
   min-height: 100vh;
   color: #dddddd;
+  /* background-color: #dddddd; */
   background: linear-gradient(270deg, #113c4a, #265a5c);
   -webkit-animation: Animation 1s ease infinite;
   -moz-animation: Animation 1s ease infinite;
@@ -64,27 +66,27 @@ li {
   0% {
   }
   50% {
-    width: 100%;
+    width: 100vw;
     height: 0px;
     margin: 0px;
     padding: 0px;
   }
   75% {
-    width: 100%;
+    width: 100vw;
     height: 0px;
     margin: 0px;
     padding: 0px;
     background-color: #dddddd;
   }
   99% {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0px;
     padding: 0px;
     background: linear-gradient(270deg, #113c4a, #265a5c);
   }
   100% {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0px;
     padding: 0px;
@@ -169,23 +171,29 @@ li {
 /* Landing Styles */
 
 .landing {
-  height: 100vh;
+  position: absolute;
+  min-height: 100vh;
   width: 100vw;
-  display: grid;
-  justify-content: center;
-  align-content: center;
   grid-template-rows: 33vh 33vh 34vh;
   grid-template-columns: 33% 33% 34%;
   background-color: #dddddd;
 }
 
 .middle-box {
-  grid-row-start: 2;
-  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column: 1 / 3;
   width: 100vw;
-  display: flex;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+
+  /* display: inline-flex;
+  justify-content: space-between;
+  align-content: stretch;
+  flex: 1; */
+  /* display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: center; */
 }
 
 .entrance {
@@ -232,11 +240,12 @@ li {
   order: 1;
   padding-right: 5%;
   align-self: center;
+  justify-self: right;
   animation: rightarrowmove 2s ease-in-out infinite;
   color: black;
 }
 
-/* Dividers */
+/* Divider */
 
 .divider {
   border-top: double;
@@ -247,7 +256,7 @@ li {
   justify-self: flex-start;
   align-self: top;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 3%;
 }
 
 /* Main */
@@ -274,6 +283,7 @@ li {
 
 .main {
   width: 100vw;
+  background: linear-gradient(270deg, #113c4a, #265a5c);
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 10% 80% 10%;
@@ -396,6 +406,7 @@ li {
   justify-content: space-around;
   display: flex;
   width: 60%;
+  margin-top: 2%;
   grid-row-start: 3;
   text-align: left;
   background: rgba(255, 255, 255, 0.05);
@@ -510,6 +521,8 @@ li {
   height: auto;
   grid-row-start: 5;
   padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -730,8 +743,8 @@ li {
   display: flex;
   justify-content: flex-end;
   position: sticky;
-  bottom: 1rem;
-  right: 5rem;
+  bottom: 2rem;
+  right: 4rem;
   margin-right: 5rem;
   padding: 0;
 }
