@@ -150,7 +150,10 @@ const Resume = () => {
       <div className="divider"></div>
       <div id="resume">
         <div id="resume-container">
-          <a href="https://docs.google.com/document/d/1hHx4L47Nv9XGzBNxZbou0JdxCDeuJ8AEyK_Cqk5SZIE/edit?usp=sharing">
+          <a
+            href="https://docs.google.com/document/d/1hHx4L47Nv9XGzBNxZbou0JdxCDeuJ8AEyK_Cqk5SZIE/edit?usp=sharing"
+            target="_blank"
+          >
             {" "}
             <img className="resume-img" src={resume} />
           </a>
