@@ -5,10 +5,13 @@ import ProjectList from "../components/ProjectList";
 
 const AboutMe = () => {
   return (
-    <div className="comp">
+    <div className="comp width-100-prct display-flex just-cont-center align-cont-center">
       <h1 className="about-title">About Me</h1>
       <div className="divider" />
-      <div className="grid column12 paddingless" id="about-me">
+      <div
+        className=" paddingless just-self-center align-self-center just-cont-center display-flex"
+        id="about-me"
+      >
         <div className="about-body">
           <p>
             As a child, I fell in love with programming while playing the
@@ -33,7 +36,10 @@ const AboutMe = () => {
             growth-minded company!
           </p>
         </div>
-        <div id="highlights">
+        <div
+          className="display-flex align-cont-center width-100-prct"
+          id="highlights"
+        >
           <h2 className="underline">Highlights</h2>
           <ul className="highlight-list">
             <li>
@@ -50,90 +56,107 @@ const AboutMe = () => {
           </ul>
         </div>
       </div>
-      <div id="skills-box">
-        <div className="skill-title">
+      <div id="skills-box display-flex just-cont-center align-cont-center">
+        <div className="skill-title width-100-prct box-shadow">
           <h2>Frontend</h2>
         </div>
 
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <i className="fa-brands fa-sass fa-2xl skill-icon"></i>{" "}
-          <h3 className="skill-set">Sass</h3>
-          <p className="skill-prof">Proficiency: Advanced</p>
-          <p className="skill-description">
+          <h3 className="underline">Sass</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Advanced
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have over 2 years of experience with Sass. It is my preferred CSS
             preprocessor.
           </p>
         </div>
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <i className="fa-brands fa-react fa-2xl skill-icon"></i>
-          <h3 className="skill-set"> React </h3>
-          <p className="skill-prof">Proficiency: Advanced</p>
-          <p className="skill-description">
+          <h3 className="underline"> React </h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Advanced
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have 4 years of experience with the React framework in web
             development.
           </p>
         </div>
-        <div className="skill-title">
+        <div className="skill-title width-100-prct box-shadow">
           <h2>Languages</h2>
         </div>
-        <div className="skill-item order2">
+        <div className="skill-item order2  just-cont-center align-cont-center">
           <i className="fa-brands fa-square-js fa-2xl skill-icon"></i>{" "}
-          <h3 className="skill-set">Vanilla Javascript</h3>
-          <p className="skill-prof">Proficiency: Advanced</p>
-          <p className="skill-description">
+          <h3 className="underline">Vanilla Javascript</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Advanced
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have over 4 years of experience with Javascript in web and
             application development.
           </p>
         </div>
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <i className="fa-brands fa-python fa-2xl skill-icon"></i>{" "}
-          <h3 className="skill-set">Python</h3>
-          <p className="skill-prof">Proficiency: Intermediate</p>
-          <p className="skill-description">
+          <h3 className="underline">Python</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Intermediate
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have 2 years of experience with Python developing commissioned
             applications for clients.
           </p>
         </div>
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <div className="double-icon">
             <i className="fa-brands fa-html5 fa-2xl skill-icon"></i>
             <i className="fa-brands fa-css3-alt fa-2xl skill-icon"></i>
           </div>{" "}
-          <h3 className="skill-set">HTML/CSS</h3>
-          <p className="skill-prof">Proficiency: Expert</p>
-          <p className="skill-description">
+          <h3 className="underline">HTML/CSS</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Expert
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have over 5 years exdperience with HTML/CSS developing web pages.
           </p>
         </div>
-        <div className="skill-title">
+        <div className="skill-title width-100-prct box-shadow">
           <h2>Backend</h2>
         </div>
 
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <i className="fa-solid fa-database fa-2xl skill-icon"></i>{" "}
-          <h3 className="skill-set">MongoDB</h3>
-          <p className="skill-prof"> Proficiency: Advanced</p>
-          <p className="skill-description">
+          <h3 className="underline">MongoDB</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            {" "}
+            Proficiency: Advanced
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have over 3 years of experience with database design and
             implemenation using MongoDB. The majority of my projects use a MERN
             stack.
           </p>
         </div>
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <i className="fa-solid fa-database fa-2xl skill-icon"></i>{" "}
-          <h3 className="skill-set">PostgreSQL</h3>
-          <p className="skill-prof">Proficiency: Advanced</p>
-          <p className="skill-description">
+          <h3 className="underline">PostgreSQL</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Advanced
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have over 3 years of experience with database design and
             implementation using PostgreSQL. It is my preferred technology for
             database creation.
           </p>
         </div>
-        <div className="skill-item">
+        <div className="skill-item just-cont-center align-cont-center">
           <i className="fa-brands fa-node fa-2xl skill-icon"></i>{" "}
-          <h3 className="skill-set">Node.js</h3>
-          <p className="skill-prof">Proficiency: Intermediate</p>
-          <p className="skill-description">
+          <h3 className="underline">Node.js</h3>
+          <p className="skill-prof just-self-center align-self-center">
+            Proficiency: Intermediate
+          </p>
+          <p className="skill-description just-self-center align-self-center">
             I have 3 years of experience with Node.js in development of
             full-stack applications.
           </p>
@@ -145,17 +168,20 @@ const AboutMe = () => {
 
 const Resume = () => {
   return (
-    <div className="comp">
+    <div className="comp width-100-prct display-flex just-cont-center align-cont-center">
       <h1 className="resume-title">Resume</h1>
       <div className="divider"></div>
-      <div id="resume">
+      <div
+        className="just-self-center align-self-center width-100-prct display-grid"
+        id="resume"
+      >
         <div id="resume-container">
           <a
             href="https://docs.google.com/document/d/1hHx4L47Nv9XGzBNxZbou0JdxCDeuJ8AEyK_Cqk5SZIE/edit?usp=sharing"
             target="_blank"
           >
             {" "}
-            <img className="resume-img" src={resume} />
+            <img className="resume-img height-100-prct" src={resume} />
           </a>
         </div>
       </div>
@@ -165,29 +191,46 @@ const Resume = () => {
 
 const Contact = () => {
   return (
-    <div id="contact" className="comp">
+    <div
+      id="contact"
+      className="comp width-100-prct display-flex just-cont-center align-cont-center just-self-center align-self-center"
+    >
       <h1 className="contact-title">Contact Me</h1>
       <div className="divider"></div>
-      <div className="contact-list">
-        <div className="email-item">
-          <h2 id="email-text">chaz.curlee@gmail.com</h2>
+      <div className="contact-list width-100-prct height-100-prct display-flex">
+        <div className="email-item width-100-prct display-flex just-cont-center align-cont-center">
+          <h2 className="marginless" id="email-text">
+            chaz.curlee@gmail.com
+          </h2>
 
-          <a className="web-link" href="mailto:chaz.curlee@gmail.com">
+          <a
+            className="web-link just-self-center align-self-center"
+            href="mailto:chaz.curlee@gmail.com"
+          >
             <i className="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
           </a>
         </div>
-        <div id="icon-list">
-          <div id="linkedin" className="contact-item">
+        <div className="display-flex just-cont-center" id="icon-list">
+          <div
+            id="linkedin"
+            className="contact-item just-cont-center align-cont-center"
+          >
             <a href="https://www.linkedin.com/in/chaz-curlee/" target="_blank">
               <i className="fab fa-linkedin fa-2xl"></i>
             </a>
           </div>
-          <div id="twitter" className="contact-item">
+          <div
+            id="twitter"
+            className="contact-item just-cont-center align-cont-center"
+          >
             <a href="https://twitter.com/blank_brow" target="_blank">
               <i className="fab fa-twitter fa-2xl"></i>
             </a>
           </div>
-          <div id="github" className="contact-item">
+          <div
+            id="github"
+            className="contact-item just-cont-center align-cont-center"
+          >
             <a href="https://github.com/chazcurlee" target="_blank">
               <i className="fab fa-github fa-2xl"></i>
             </a>
@@ -242,15 +285,15 @@ const Main = (props) => {
   }, []);
 
   return (
-    <div className="main fade-in">
-      <div className="hero">
-        <div className="name">
+    <div className="main fade-in width-100-vw display-grid just-cont-center align-cont-center">
+      <div className="hero just-cont-center align-cont-center just-self-center align-self-center display-grid paddingless ">
+        <div className="name display-flex just-cont-center color-white">
           <div className="namebox">Chaz Curlee</div>
         </div>
-        <div className="title">Software Engineer</div>
+        <div className="title color-white">Software Engineer</div>
 
-        <div className="nav-container">
-          <nav className="nav">
+        <div className="nav-container height-100-prct width-100-prct display-flex just-cont-center align-cont-center just-self-center">
+          <nav className="nav display-grid just-cont-center box-shadow">
             <div id="about-box" onClick={handleNav}>
               <h3 id="about-link" className="link">
                 About Me
@@ -277,7 +320,7 @@ const Main = (props) => {
           </nav>
         </div>
 
-        <div className="pic">
+        <div className="pic width-100-prct align-self-center">
           <MyPic className="pfp" />
         </div>
       </div>

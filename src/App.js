@@ -42,7 +42,7 @@ function App() {
        <Route path="/" element={<Landing open={open} setOpen={setOpen}/>} />
        <Route path="/portfolio" element={<Main setOpen={setOpen} />} />
      </Routes>
-    <span className={`${scroll} scroll-up`}>
+    <span className={`${scroll} scroll-up display-flex paddingless`}>
       <div className="clickable">
       <lord-icon
         onClick={handleScrollToTop}

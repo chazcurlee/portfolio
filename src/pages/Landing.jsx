@@ -17,12 +17,19 @@ const Landing = ({ open, setOpen }) => {
   };
 
   return (
-    <div className={`landing display-grid just-cont-center align-cont-center `}>
-      <div className={`middle-box  ${open}`}>
+    <div
+      className={`landing display-grid just-cont-center align-cont-center width-100-vw `}
+    >
+      <div
+        className={`middle-box ${open} width-100-vw height-100-vh display-grid`}
+      >
         <BsArrowLeft className={`left-arrow ${arrow}`} />{" "}
-        <BsArrowRight className={`right-arrow ${arrow}`} />
-        <div className={`open-box ${open}`} onClick={handleClick}>
-          <h3 id="intro">You're Next Software Engineer</h3>
+        <BsArrowRight className={`right-arrow ${arrow} align-self-center`} />
+        <div
+          className={`open-box ${open} display-flex just-cont-center align-cont-center just-self-center align-self-center`}
+          onClick={handleClick}
+        >
+          <h3 className="marginless">You're Next Software Engineer</h3>
         </div>
       </div>
     </div>

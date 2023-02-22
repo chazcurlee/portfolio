@@ -26,11 +26,15 @@ const ProjectList = () => {
   };
 
   return (
-    <div className="comp">
+    <div className="comp width-100-prct display-flex just-cont-center align-cont-center">
       <h1 className="project-head">Projects</h1>
       <div className="divider"></div>
-      <div className="project-item">
-        <div id="right-arrow" onClick={() => handleTick(1)}>
+      <div className="project-item display-grid">
+        <div
+          id="right-arrow"
+          className="clickable"
+          onClick={() => handleTick(1)}
+        >
           <lord-icon
             src="https://cdn.lordicon.com/zpcieyfp.json"
             trigger="click"
@@ -38,7 +42,11 @@ const ProjectList = () => {
             style={{ width: "5em", height: "5em" }}
           ></lord-icon>
         </div>
-        <div id="left-arrow" onClick={() => handleTick(-1)}>
+        <div
+          id="left-arrow"
+          className="clickable"
+          onClick={() => handleTick(-1)}
+        >
           <lord-icon
             src="https://cdn.lordicon.com/onyplpvn.json"
             trigger="click"
@@ -46,19 +54,24 @@ const ProjectList = () => {
             style={{ width: "5em", height: "5em" }}
           ></lord-icon>
         </div>
-        <img className="project-image" src={img[carouselTick]}></img>
-        <div className="project-info-box">
+        <img
+          className="project-image width-100-prct"
+          src={img[carouselTick]}
+        ></img>
+        <div className="project-info-box height-100-prct display-grid">
           <h1 className="project-title">{title[carouselTick]}</h1>
-          <p className="project-body">{summ[carouselTick]}</p>
+          <p className="project-body align-self-center justify-self-center">
+            {summ[carouselTick]}
+          </p>
           <a
-            className="project-dep-link"
+            className="project-dep-link align-self-center just-self-center"
             href={hostLink[carouselTick]}
             target="_blank"
           >
             <i className="fa-solid fa-globe fa-2xl"></i>
           </a>
           <a
-            className="project-git-link"
+            className="project-git-link align-self-center just-self-center"
             href={gitLink[carouselTick]}
             target="_blank"
           >

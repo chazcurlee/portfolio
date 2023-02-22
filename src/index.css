@@ -15,7 +15,6 @@ body {
   margin: 0px;
   min-height: 100vh;
   color: #dddddd;
-  /* background-color: #dddddd; */
   background: linear-gradient(270deg, #113c4a, #265a5c);
   -webkit-animation: Animation 1s ease infinite;
   -moz-animation: Animation 1s ease infinite;
@@ -173,7 +172,6 @@ li {
 .landing {
   position: absolute;
   min-height: 100vh;
-  width: 100vw;
   grid-template-rows: 33vh 33vh 34vh;
   grid-template-columns: 33% 33% 34%;
   background-color: #dddddd;
@@ -182,18 +180,7 @@ li {
 .middle-box {
   grid-row-start: 1;
   grid-column: 1 / 3;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
   grid-template-columns: 33% 33% 33%;
-
-  /* display: inline-flex;
-  justify-content: space-between;
-  align-content: stretch;
-  flex: 1; */
-  /* display: flex;
-  justify-content: center;
-  align-content: center; */
 }
 
 .entrance {
@@ -202,12 +189,7 @@ li {
 }
 
 .open-box {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   order: 2;
-  justify-self: center;
-  align-self: center;
   border: solid;
   border-color: black;
   width: 18rem;
@@ -219,10 +201,6 @@ li {
   color: black;
 }
 
-#intro {
-  margin: 0;
-}
-
 .open-box:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -230,7 +208,6 @@ li {
 
 .left-arrow {
   order: 3;
-  padding-left: 5%;
   align-self: center;
   animation: leftarrowmove 2s ease-in-out infinite;
   color: black;
@@ -238,8 +215,6 @@ li {
 
 .right-arrow {
   order: 1;
-  padding-right: 5%;
-  align-self: center;
   justify-self: right;
   animation: rightarrowmove 2s ease-in-out infinite;
   color: black;
@@ -282,17 +257,13 @@ li {
 }
 
 .main {
-  width: 100vw;
   background: linear-gradient(270deg, #113c4a, #265a5c);
-  display: grid;
   grid-template-rows: auto;
   grid-template-columns: 10% 80% 10%;
   font-family: "Ubuntu", sans-serif;
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 5s ease infinite;
-  justify-content: center;
-  align-content: center;
 }
 
 /* Heading */
@@ -301,17 +272,11 @@ li {
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
-  justify-self: center;
-  align-self: center;
   width: 95%;
   grid-row-start: 1;
   padding: 200px;
-  display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 0;
-  justify-content: center;
-  align-content: center;
 }
 
 .name {
@@ -320,9 +285,6 @@ li {
   grid-column-start: 1;
   grid-column-end: 1;
   height: 12em;
-  color: #dddddd;
-  display: flex;
-  justify-content: center;
   align-items: flex-end;
 }
 
@@ -334,7 +296,6 @@ li {
 
 .title {
   grid-row-start: 2;
-  color: #dddddd;
   font-size: 5em;
 }
 
@@ -346,9 +307,7 @@ li {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-  width: 100%;
   justify-self: flex-start;
-  align-self: center;
 }
 
 .pfp {
@@ -356,14 +315,8 @@ li {
 }
 
 .nav-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   color: #113c4a;
   grid-column: 1 / 3;
-  justify-self: center;
   position: sticky;
   top: 0;
 }
@@ -374,13 +327,10 @@ li {
   border: solid;
   border-color: #dddddd;
   border-radius: 64px;
-  display: grid;
   grid-template-columns: repeat(12, 1fr);
-  justify-content: center;
   align-items: center;
   background-color: #dddddd;
   color: #113c4a;
-  box-shadow: 20px 20px 60px #081d24, -2px -2px 6px #0a242c;
 }
 
 /* Content */
@@ -388,11 +338,7 @@ li {
 .comp {
   grid-row-start: 3;
   grid-column: 2;
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   margin-bottom: 50px;
 }
 
@@ -401,10 +347,7 @@ li {
 #about-me {
   grid-column-start: 2;
   grid-column-end: 2;
-  justify-self: center;
-  align-self: center;
   justify-content: space-around;
-  display: flex;
   width: 60%;
   margin-top: 2%;
   grid-row-start: 3;
@@ -463,10 +406,8 @@ li {
   max-width: 25%;
   height: auto;
   margin: 5%;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(17, 60, 74, 0.37);
   backdrop-filter: blur(2.5px);
@@ -476,28 +417,22 @@ li {
 }
 
 .skill-title {
-  width: 100%;
   background-color: #dddddd;
   color: #113c4a;
   margin-top: 5%;
-  box-shadow: 20px 20px 60px #081d24, -2px -2px 6px #0a242c;
+  padding: 0.1%;
   border-radius: 64px;
 }
 
 .skill-description {
   max-width: 75%;
   text-align: center;
-  justify-self: center;
-  align-self: center;
+  padding-bottom: 3%;
 }
 
 .skill-icon {
   margin-bottom: 1em;
   display: inline;
-}
-
-.skill-set {
-  text-decoration: underline;
 }
 
 .double-icon {
@@ -506,8 +441,6 @@ li {
 
 .skill-prof {
   max-width: 75%;
-  justify-self: center;
-  align-self: center;
 }
 
 /* Resume */
@@ -515,22 +448,17 @@ li {
 #resume {
   grid-column-start: 2;
   grid-column-end: 2;
-  justify-self: center;
-  align-self: center;
-  width: 100%;
   height: auto;
   grid-row-start: 5;
   padding: 5%;
   padding-top: 2%;
   padding-bottom: 0;
-  display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
 .resume-img {
   object-fit: cover;
   max-width: 100%;
-  height: 100%;
 }
 
 #resume-box {
@@ -551,7 +479,7 @@ li {
 
 /* Projects */
 
-#projects {
+/* #projects {
   border: solid;
   border-color: #dddddd;
   grid-column-start: 2;
@@ -563,7 +491,7 @@ li {
   grid-row-start: 7;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-}
+} */
 
 #projects-box {
   grid-column: 8 / 9;
@@ -577,7 +505,6 @@ li {
 
 .project-item {
   grid-column: 3 / 11;
-  display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -585,7 +512,6 @@ li {
 .project-image {
   grid-column: 3 / 11;
   grid-row: 1;
-  width: 100%;
   height: 10em;
   justify-self: flex-end;
   align-self: flex-end;
@@ -601,8 +527,6 @@ li {
 .project-body {
   grid-column: 3 / 4;
   grid-row: 1 / 4;
-  align-self: center;
-  justify-self: center;
   text-align: left;
   border-left: 1px solid rgba(255, 255, 255, 0.18);
   padding-left: 15%;
@@ -612,33 +536,16 @@ li {
 .project-git-link {
   grid-row: 2;
   grid-column: 1;
-  align-self: center;
-  justify-self: center;
 }
 
 .project-dep-link {
   grid-row: 2;
   grid-column: 2;
-  align-self: center;
-  justify-self: center;
-}
-
-.project-comp {
-  grid-row-start: 3;
-  grid-column: 2;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 50px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
 }
 
 #right-arrow {
   grid-column: 12;
   grid-row: 2 /4;
-  cursor: pointer;
   width: 50%;
   height: 20%;
 }
@@ -646,7 +553,6 @@ li {
 #left-arrow {
   grid-column: 1;
   grid-row: 2 / 4;
-  cursor: pointer;
   width: 100%;
   height: 10%;
 }
@@ -654,8 +560,6 @@ li {
 .project-info-box {
   grid-row: 2;
   grid-column: 3 / 11;
-  height: 100%;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   background: rgba(255, 255, 255, 0.05);
@@ -670,8 +574,6 @@ li {
 /* Contact */
 
 #contact {
-  justify-self: center;
-  align-self: center;
   height: auto;
 }
 
@@ -692,9 +594,6 @@ li {
 }
 
 .contact-list {
-  width: 100%;
-  height: 100%;
-  display: flex;
   flex-direction: column;
   padding: 1rem;
 }
@@ -702,34 +601,23 @@ li {
 .contact-item {
   margin-left: 1%;
   margin-right: 1%;
-  justify-content: center;
-  align-content: center;
 }
 
 .email-item {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   margin: 0 0 1% 0;
 }
 
 #email-text {
   font-size: 3rem;
-  margin: 0;
 }
 
 .web-link {
-  justify-self: center;
-  align-self: center;
   height: auto;
   font-size: 1rem;
   margin-left: 1%;
 }
 
 #icon-list {
-  display: flex;
-  justify-content: center;
   margin-top: 1%;
 }
 
@@ -740,13 +628,11 @@ li {
 /* Scroll Icon */
 
 .scroll-up {
-  display: flex;
   justify-content: flex-end;
   position: sticky;
   bottom: 2rem;
   right: 4rem;
   margin-right: 5rem;
-  padding: 0;
 }
 
 .scroll-fade-in {
@@ -757,33 +643,4 @@ li {
 .scroll-fade-out {
   animation: scrollfadeout 1s ease;
   animation-fill-mode: forwards;
-}
-
-/* Functionality */
-
-.clickable {
-  cursor: pointer;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.grid {
-  display: grid;
-}
-
-.column12 {
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.row12 {
-  grid-template-rows: repeat(12, 1fr);
-}
-.paddingless {
-  padding: 0;
 }
