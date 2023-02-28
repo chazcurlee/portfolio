@@ -285,14 +285,14 @@ const Main = (props) => {
   }, []);
 
   return (
-    <div className="main fade-in width-100-vw display-grid just-cont-center align-cont-center">
-      <div className="hero just-cont-center align-cont-center just-self-center align-self-center display-grid paddingless ">
+    <div className=" fade-in width-100-vw display-grid just-cont-center align-cont-center main">
+      <div className=" just-cont-center align-cont-center just-self-center align-self-center display-grid paddingless hero">
         <div className="name display-flex just-cont-center color-white">
           <div className="namebox">Chaz Curlee</div>
         </div>
         <div className="title color-white">Software Engineer</div>
 
-        <div className="nav-container height-100-prct width-100-prct display-flex just-cont-center align-cont-center just-self-center">
+        <div className=" height-100-prct width-100-prct display-flex just-cont-center align-cont-center just-self-center nav-container">
           <nav className="nav display-grid just-cont-center box-shadow">
             <div id="about-box" onClick={handleNav}>
               <h3 id="about-link" className="link">

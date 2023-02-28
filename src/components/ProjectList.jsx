@@ -36,6 +36,7 @@ const ProjectList = () => {
           onClick={() => handleTick(1)}
         >
           <lord-icon
+            id="r-arrow"
             src="https://cdn.lordicon.com/zpcieyfp.json"
             trigger="click"
             colors="primary:#ffffff,secondary:#08a88a"
@@ -48,6 +49,7 @@ const ProjectList = () => {
           onClick={() => handleTick(-1)}
         >
           <lord-icon
+            id="l-arrow"
             src="https://cdn.lordicon.com/onyplpvn.json"
             trigger="click"
             colors="primary:#ffffff,secondary:#08a88a"
