@@ -62,9 +62,11 @@ const ProjectList = () => {
         ></img>
         <div className="project-info-box height-100-prct display-grid">
           <h1 className="project-title">{title[carouselTick]}</h1>
-          <p className="project-body align-self-center justify-self-center">
-            {summ[carouselTick]}
-          </p>
+          <div className="project-body-container">
+            <p className="project-body align-self-center justify-self-center">
+              {summ[carouselTick]}
+            </p>
+          </div>
           <a
             className="project-dep-link align-self-center just-self-center"
             href={hostLink[carouselTick]}

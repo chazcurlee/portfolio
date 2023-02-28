@@ -395,7 +395,6 @@ li {
   grid-row-start: 3;
   grid-column: 2;
   flex-direction: column;
-  margin-bottom: 50px;
 }
 
 /* About Me */
@@ -549,7 +548,7 @@ li {
 .project-item {
   grid-column: 3 / 11;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .project-image {
@@ -567,11 +566,19 @@ li {
   align-self: flex-end;
 }
 
-.project-body {
+.project-body-container {
   grid-column: 3 / 4;
   grid-row: 1 / 4;
   text-align: left;
   border-left: 1px solid rgba(255, 255, 255, 0.18);
+  /* padding-left: 15%;
+  padding-right: 15%; */
+}
+
+.project-body {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+  text-align: left;
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -816,16 +823,17 @@ li {
 
   .resume-img {
     height: 100%;
+    background-size: cover;
   }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1023px) {
   .comp {
     grid-column: 1 /4;
-    margin: 0% 3% 0% 3%;
+    margin: 0% 0% 0% 0%;
     width: 95%;
     height: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 10vh;
   }
 
   #about-me {
@@ -847,28 +855,35 @@ li {
     display: none;
   }
 
-  .project-item {
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
+  .divider {
+    margin-left: 3%;
   }
 
-  .project-image {
-    grid-row: 1;
-    grid-column: 1 / 13;
-    height: auto;
+  .project-item {
+    /* margin-right: 3%; */
+    margin-bottom: 3%;
+    margin-left: 3%;
+    grid-template-rows: auto 20% 1fr;
   }
 
   .project-info-box {
     grid-row: 3;
     grid-column: 1 / 13;
-    padding: 0;
-    max-height: 75%;
+    grid-template-rows: 30% 10% 100%;
+    padding: 2%;
+    margin-bottom: 5%;
   }
 
   .project-body {
+    padding: 3%;
+  }
+
+  .project-body-container {
     grid-row: 3;
     grid-column: 1 / 4;
     font-size: 1rem;
+    max-height: 1%;
+    /* padding: 3%; */
   }
 
   .project-title {
@@ -943,6 +958,19 @@ li {
 
   #icon-list {
     justify-content: space-around;
+  }
+
+  .project-image {
+    grid-row: 1;
+    grid-column: 1 / 13;
+    max-height: 75%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .project-image {
+    grid-column: 1 / 13;
   }
 }
 
